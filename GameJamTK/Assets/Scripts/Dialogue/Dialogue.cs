@@ -1,15 +1,26 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue")]
 public class Dialogue : ScriptableObject
 {
-    public string dialogueId, nextId;
-    public DialogueLine[] dialogueLines;
+	public DialogueDictionary[] dialogues;
+
+	public DialogueDictionary GetDialogue(CharacterType characterType)
+	{
+		return dialogues.FirstOrDefault(dialogues => dialogues.character == characterType);
+	}
 }
 
+[Serializable]
+public class DialogueDictionary
+{
+	public CharacterType character;
+	public DialogueLine[] dialogue;
+}
 
 [Serializable]
 public class DialogueLine
@@ -27,6 +38,7 @@ public class DialogueChoice
 {
 	public int index;
 	public string message;
+	public SceneType[] scene;
 }
 
 [Serializable]
@@ -35,4 +47,11 @@ public enum CharacterType
 	Lucifer,
 	Wolf,
 	Rabbit
+}
+
+public enum SceneType
+{
+	Room,
+	Building,
+	School
 }

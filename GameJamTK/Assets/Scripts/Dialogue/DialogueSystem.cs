@@ -1,0 +1,109 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class DialogueSystem : MonoBehaviour
+{
+    public static DialogueSystem instance;
+    
+    public PlayerController player;
+    public Transform[] Characters;
+    public DialoguePanel[] DialoguePanels;
+    
+    public Dictionary<CharacterType, Transform> characters;
+    public Dictionary<CharacterType, DialoguePanel> dialoguePanels;
+    
+    public Dialogue[] roomDialogues;
+    public Dialogue[] buildingDialogues;
+    public Dialogue[] schoolDialogues;
+
+    public CharacterType currentCharacter = CharacterType.Wolf;
+    private CharacterType previousCharacter = default;
+    
+
+    public bool onWindow = false;
+    public int ind = 0;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return; 
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+        
+        characters = new Dictionary<CharacterType, Transform>()
+        {
+            { CharacterType.Lucifer , Characters[0]},
+            { CharacterType.Wolf , Characters[1]},
+            { CharacterType.Rabbit , Characters[2]}
+        };
+
+        dialoguePanels = new Dictionary<CharacterType, DialoguePanel>()
+        {
+            { CharacterType.Lucifer , DialoguePanels[0]},
+            { CharacterType.Wolf , DialoguePanels[1]},
+            { CharacterType.Rabbit , DialoguePanels[2]}
+        };
+    }
+
+    void Update()
+    {
+        StartDialogue();
+    }
+
+
+    private void StartDialogue()
+    {
+        if (currentCharacter == CharacterType.Wolf)
+        {
+            return;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Dialogue dialogue;
+            switch (GameManager.instance.scene)
+            {
+                case SceneType.Room:
+                    dialogue = roomDialogues[GameManager.instance.progress[SceneType.Room]];
+                    break;
+
+                case SceneType.Building:
+                    dialogue = buildingDialogues[GameManager.instance.progress[SceneType.Building]];
+                    break;
+
+                default:
+                    dialogue = schoolDialogues[GameManager.instance.progress[SceneType.School]];
+                    break;
+            }
+            DialogueLine(dialogue);
+            ind++;
+        }
+    }
+
+    private void DialogueLine(Dialogue dialogue)
+    {
+        dialoguePanels[previousCharacter].gameObject.SetActive(false);
+        onWindow = false;
+
+        if (dialogue.GetDialogue(currentCharacter).dialogue.Length <= ind)
+        {
+            ind = -1;
+            return;
+        }
+        
+        CharacterType character = dialogue.GetDialogue(currentCharacter).dialogue[ind].character;
+        dialoguePanels[character].gameObject.SetActive(true);
+        dialoguePanels[character].transform.position = characters[character].position;
+        dialoguePanels[character].Message(dialogue.GetDialogue(currentCharacter).dialogue[ind].message);
+
+        previousCharacter = character;
+        onWindow = true;
+        player.rb2d.velocity = Vector2.zero;
+    }
+}
