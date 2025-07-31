@@ -66,24 +66,29 @@ public class DialogueSystem : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Dialogue dialogue;
-            switch (GameManager.instance.scene)
-            {
-                case SceneType.Room:
-                    dialogue = roomDialogues[GameManager.instance.progress[SceneType.Room]];
-                    break;
-
-                case SceneType.Building:
-                    dialogue = buildingDialogues[GameManager.instance.progress[SceneType.Building]];
-                    break;
-
-                default:
-                    dialogue = schoolDialogues[GameManager.instance.progress[SceneType.School]];
-                    break;
-            }
-            DialogueLine(dialogue);
-            ind++;
+            Use();
         }
+    }
+
+    public void Use()
+    {
+        Dialogue dialogue;
+        switch (GameManager.instance.scene)
+        {
+            case SceneType.Room:
+                dialogue = roomDialogues[GameManager.instance.progress[SceneType.Room]];
+                break;
+
+            case SceneType.Building:
+                dialogue = buildingDialogues[GameManager.instance.progress[SceneType.Building]];
+                break;
+
+            default:
+                dialogue = schoolDialogues[GameManager.instance.progress[SceneType.School]];
+                break;
+        }
+        DialogueLine(dialogue);
+        ind++;
     }
 
     private void DialogueLine(Dialogue dialogue)
@@ -91,17 +96,21 @@ public class DialogueSystem : MonoBehaviour
         dialoguePanels[previousCharacter].gameObject.SetActive(false);
         onWindow = false;
 
-        if (dialogue.GetDialogue(currentCharacter).dialogue.Length <= ind)
+        if (dialogue.GetDialogue(currentCharacter) == null || dialogue.GetDialogue(currentCharacter).dialogue.Length <= ind)
         {
             ind = -1;
             return;
         }
-        
-        CharacterType character = dialogue.GetDialogue(currentCharacter).dialogue[ind].character;
+
+        DialogueLine dialogueLine = dialogue.GetDialogue(currentCharacter).dialogue[ind];
+        CharacterType character = dialogueLine.character;
         dialoguePanels[character].gameObject.SetActive(true);
         dialoguePanels[character].transform.position = characters[character].position;
-        dialoguePanels[character].Message(dialogue.GetDialogue(currentCharacter).dialogue[ind].message);
-
+        dialoguePanels[character].Message(dialogueLine.message);
+        
+        if(dialogueLine.choices.Length > 0)
+            dialoguePanels[character].Buttons(dialogueLine.choices);
+        
         previousCharacter = character;
         onWindow = true;
         player.rb2d.velocity = Vector2.zero;

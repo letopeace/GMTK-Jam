@@ -11,7 +11,12 @@ public class Dialogue : ScriptableObject
 
 	public DialogueDictionary GetDialogue(CharacterType characterType)
 	{
-		return dialogues.FirstOrDefault(dialogues => dialogues.character == characterType);
+		for (int i = 0; i < dialogues.Length; i++)
+		{
+			if (dialogues[i].character == characterType)
+				return dialogues[i];
+		}
+		return null;
 	}
 }
 
@@ -36,6 +41,7 @@ public class DialogueLine
 [Serializable]
 public class DialogueChoice
 {
+	public bool isRed = false;
 	public int index;
 	public string message;
 	public SceneType[] scene;

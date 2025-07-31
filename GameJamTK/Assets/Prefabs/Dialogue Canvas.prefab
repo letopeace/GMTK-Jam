@@ -118,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5254653388180475296, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6432355143691971319, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
       propertyPath: m_Pivot.x
@@ -218,13 +218,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2563158535418426561}
     m_Modifications:
+    - target: {fileID: 1370474698266598924, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5254653388180475296, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
       propertyPath: m_Name
       value: Luci Dialogue Panel
       objectReference: {fileID: 0}
     - target: {fileID: 5254653388180475296, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6432355143691971319, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
       propertyPath: m_Pivot.x
@@ -252,11 +256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6432355143691971319, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 257.6146
+      value: 337
       objectReference: {fileID: 0}
     - target: {fileID: 6432355143691971319, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 47.718
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 6432355143691971319, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
       propertyPath: m_LocalPosition.x
@@ -305,6 +309,10 @@ PrefabInstance:
     - target: {fileID: 6432355143691971319, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325355880569609299, guid: ef6f2066d7d6ede4d9ca6f6b1daa6761, type: 3}
+      propertyPath: m_fontSize
+      value: 69.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
