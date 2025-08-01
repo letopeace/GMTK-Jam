@@ -26,6 +26,8 @@ public class DialogueSystem : MonoBehaviour
     public bool onWindow = false;
     public bool onButton = false;
     public int ind = 0;
+    public bool isSpoken = false;
+    public static event Action Spook;
 
     private void Awake()
     {
@@ -60,7 +62,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void StartDialogue()
     {
-        if (currentCharacter == CharacterType.Wolf || onButton)
+        if (currentCharacter == CharacterType.Wolf || onButton || isSpoken)
         {
             return;
         }
@@ -100,6 +102,8 @@ public class DialogueSystem : MonoBehaviour
         if (dialogue.GetDialogue(currentCharacter) == null || dialogue.GetDialogue(currentCharacter).dialogue.Length <= ind)
         {
             ind = -1;
+            isSpoken = true;
+            Spook?.Invoke();
             return;
         }
 
