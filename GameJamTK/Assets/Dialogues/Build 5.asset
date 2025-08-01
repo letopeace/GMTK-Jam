@@ -10,40 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33283ef87c67360439da346dd2cab074, type: 3}
-  m_Name: Build 1
+  m_Name: Build 5
   m_EditorClassIdentifier: 
   dialogues:
   - character: 0
     dialogue:
     - character: 0
       index: 0
-      message: Oops. Looks like he tripped.
+      message: "Didn\u2019t save him again?"
       choices: []
     - character: 1
-      index: 1
-      message: Tripped?!
+      index: 0
+      message: "Holy hell, he\u2019s not even listening to me."
       choices: []
     - character: 0
-      index: 2
-      message: "If you make it so he doesn\u2019t jump, you can get out of Hell."
+      index: 0
+      message: He is listening.
       choices: []
     - character: 1
-      index: 3
-      message: What? But he already jumped!
+      index: 0
+      message: Liar!
       choices: []
     - character: 0
-      index: 4
-      message: "Doesn\u2019t matter. Go forward."
+      index: 0
+      message: No.
       choices: []
     - character: 1
-      index: 5
-      message: Where?
+      index: 0
+      message: Then why does he keep jumping?
       choices: []
     - character: 0
-      index: 6
-      message: Forward. Or do you not want to escape Hell?
+      index: 0
+      message: "Hmm. Good question, isn\u2019t it?"
       choices:
       - isRed: 0
         index: 0
-        message: Yeah, yeah, I got it.
-        scenes: 00000000
+        message: So how do I save him then?
+        scenes: 0100000000000000
+      - isRed: 0
+        index: 0
+        message: "Fine, let\u2019s try again."
+        scenes: 

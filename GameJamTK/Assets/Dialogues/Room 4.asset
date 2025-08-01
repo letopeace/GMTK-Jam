@@ -10,30 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33283ef87c67360439da346dd2cab074, type: 3}
-  m_Name: Build 2
+  m_Name: Room 4
   m_EditorClassIdentifier: 
   dialogues:
-  - character: 2
-    dialogue:
-    - character: 1
-      index: 0
-      message: I need to somehow stop him.
-      choices:
-      - isRed: 0
-        index: 0
-        message: "Hey! Rabbit, don\u2019t do it!"
-        scenes: 01000000
-      - isRed: 0
-        index: 1
-        message: Rabbit? What are you doing? Come here.
-        scenes: 01000000
-      - isRed: 0
-        index: 2
-        message: STOP!!!
-        scenes: 01000000
   - character: 0
     dialogue:
     - character: 0
       index: 0
-      message: Come on. Save him.
+      message: "You already know how to save him, don\u2019t you?"
       choices: []
+    - character: 1
+      index: 0
+      message: How?!
+      choices:
+      - isRed: 0
+        index: 0
+        message: I have no damn idea how to save him!
+        scenes: 01000000

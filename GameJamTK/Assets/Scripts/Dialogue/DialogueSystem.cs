@@ -24,6 +24,7 @@ public class DialogueSystem : MonoBehaviour
     
 
     public bool onWindow = false;
+    public bool onButton = false;
     public int ind = 0;
 
     private void Awake()
@@ -59,7 +60,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void StartDialogue()
     {
-        if (currentCharacter == CharacterType.Wolf)
+        if (currentCharacter == CharacterType.Wolf || onButton)
         {
             return;
         }

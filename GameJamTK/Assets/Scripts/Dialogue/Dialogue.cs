@@ -44,7 +44,7 @@ public class DialogueChoice
 	public bool isRed = false;
 	public int index;
 	public string message;
-	public SceneType[] scene;
+	public SceneType[] scenes;
 }
 
 [Serializable]

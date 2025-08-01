@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33283ef87c67360439da346dd2cab074, type: 3}
+  m_Name: Room 0
+  m_EditorClassIdentifier: 
+  dialogues:
+  - character: 0
+    dialogue:
+    - character: 0
+      index: 0
+      message: Hello. My name is Lucifer.
+      choices: []
+    - character: 1
+      index: 1
+      message: WHAT?! The monster can talk?!
+      choices: []
+    - character: 0
+      index: 2
+      message: Monster? I'm the Lord of Hell.
+      choices: []
+    - character: 1
+      index: 3
+      message: I'm sorry!!! Uhh... What is this place?
+      choices: []
+    - character: 0
+      index: 4
+      message: Can't you see? This is Hell.
+      choices: []
+    - character: 1
+      index: 5
+      message: "What?! How did I end up in Hell? I didn\u2019t do anything wrong!"
+      choices: []
+    - character: 0
+      index: 6
+      message: "You\u2019re mistaken. But you can still get out."
+      choices: []
+    - character: 1
+      index: 7
+      message: Really?! How?
+      choices: []
+    - character: 0
+      index: 8
+      message: You need to go forward.
+      choices: []
+    - character: 1
+      index: 9
+      message: Forward?
+      choices: []
+    - character: 0
+      index: 10
+      message: Yes. Walk forward.
+      choices: []
+    - character: 1
+      index: 11
+      message: Is that the way out of Hell?
+      choices: []
+    - character: 0
+      index: 12
+      message: Something like that.
+      choices: []

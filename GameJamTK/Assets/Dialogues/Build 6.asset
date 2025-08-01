@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33283ef87c67360439da346dd2cab074, type: 3}
+  m_Name: Build 6
+  m_EditorClassIdentifier: 
+  dialogues:
+  - character: 0
+    dialogue:
+    - character: 0
+      index: 0
+      message: "Didn\u2019t save him again?"
+      choices: []
+    - character: 1
+      index: 0
+      message: "Holy hell, he\u2019s not even listening to me."
+      choices: []
+    - character: 0
+      index: 0
+      message: He is listening.
+      choices: []
+    - character: 1
+      index: 0
+      message: Liar!
+      choices: []
+    - character: 0
+      index: 0
+      message: No.
+      choices: []
+    - character: 1
+      index: 0
+      message: Then why does he keep jumping?
+      choices: []
+    - character: 0
+      index: 0
+      message: "Hmm. Good question, isn\u2019t it?"
+      choices:
+      - isRed: 0
+        index: 0
+        message: So how do I save him then?
+        scenes: 0100000000000000
+      - isRed: 0
+        index: 0
+        message: "Fine, let\u2019s try again."
+        scenes: 
+    - character: 0
+      index: 0
+      message: "You need to ask why he\u2019s doing it."
+      choices: []
+    - character: 1
+      index: 0
+      message: Uh... why?
+      choices: []
+    - character: 0
+      index: 0
+      message: "Don\u2019t you remember him?"
+      choices: []
+    - character: 1
+      index: 0
+      message: "Was I supposed to? I can\u2019t even see his face."
+      choices: []
+    - character: 0
+      index: 0
+      message: Go forward.
+      choices: []

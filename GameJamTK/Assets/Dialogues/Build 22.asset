@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33283ef87c67360439da346dd2cab074, type: 3}
+  m_Name: Build 22
+  m_EditorClassIdentifier: 
+  dialogues:
+  - character: 0
+    dialogue:
+    - character: 1
+      index: 0
+      message: Forgive me.
+      choices: []
+    - character: 1
+      index: 0
+      message: "I should\u2019ve seen how much you were hurting. But instead I..."
+      choices: []
+    - character: 1
+      index: 0
+      message: wanted to seem strong.
+      choices: []
+    - character: 2
+      index: 0
+      message: 'I was scared... '
+      choices: []
+    - character: 2
+      index: 0
+      message: I dreamed it would all stop.
+      choices: []
+    - character: 2
+      index: 0
+      message: No one ever tried to help me. Everyone just laughed behind my back.
+      choices: []
+    - character: 2
+      index: 0
+      message: I was afraid to say too much. Always watching my words.
+      choices: []
+    - character: 2
+      index: 0
+      message: The bullying never stopped. It felt like I was stuck in a loop.
+      choices: []
+    - character: 2
+      index: 0
+      message: "It was pure hell. But you still won\u2019t understand."
+      choices: []
+    - character: 1
+      index: 0
+      message: "No, I won\u2019t. But I\u2019ll try. Please, tell me what you felt."
+      choices: []
+    - character: 1
+      index: 0
+      message: 
+      choices: []
+    - character: 1
+      index: 0
+      message: Tell me what you thought. Tell me what you feared most. Tell me what
+        you wanted more than anything.
+      choices: []
+    - character: 1
+      index: 0
+      message: "Please, before you jump. Tell me. Curse me. Hit me. Just don\u2019t
+        leave anything unsaid."
+      choices: []
