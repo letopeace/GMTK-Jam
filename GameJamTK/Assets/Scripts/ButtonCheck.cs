@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class ButtonCheck : MonoBehaviour, IPointerDownHandler
 {
     public bool checking = false;
-    
+
+    public BoardGame board;
     private float x = 0, y = 0;
     private Vector2 startPos;
     private Vector2 tempPos;
@@ -18,15 +19,19 @@ public class ButtonCheck : MonoBehaviour, IPointerDownHandler
         startPos = transform.position;
     }
 
+    private void OnEnable()
+    {
+        board = transform.parent.parent.GetComponent<BoardGame>();
+    }
+
     private void Update()
     {
-        
-        
         if (checking)
         {
-            Vector2 pos = (Vector2)Input.mousePosition - tempPos;
+            Vector2 pos = startPos + ((Vector2)Input.mousePosition - tempPos);
+            pos = new Vector2(Mathf.Clamp(pos.x, board.left, board.right), Mathf.Clamp(pos.y, board.bottom, board.top));
 
-            transform.position = startPos + pos;
+            transform.position = pos;
             
             if (Input.GetMouseButtonUp(0))
                 checking = false;

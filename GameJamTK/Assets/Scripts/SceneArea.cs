@@ -23,7 +23,8 @@ public class SceneArea : MonoBehaviour
         }
         else if (type == SceneType.School)
         {
-            rabbit.position = rabbitPos.position;
+            if (GameManager.instance.progress[SceneType.School] != 0)
+                rabbit.position = rabbitPos.position;
         }
         else
         {

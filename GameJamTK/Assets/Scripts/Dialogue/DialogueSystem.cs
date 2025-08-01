@@ -104,7 +104,7 @@ public class DialogueSystem : MonoBehaviour
             if (currentCharacter == CharacterType.Lucifer)
             {
                 isSpoken = true;
-                Spook?.Invoke();
+                Spooked();
             }
             
             ind = -1;
@@ -123,5 +123,10 @@ public class DialogueSystem : MonoBehaviour
         previousCharacter = character;
         onWindow = true;
         player.rb2d.velocity = Vector2.zero;
+    }
+
+    public void Spooked()
+    {
+        Spook?.Invoke();
     }
 }

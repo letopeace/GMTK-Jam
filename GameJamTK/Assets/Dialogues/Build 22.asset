@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Build 22
   m_EditorClassIdentifier: 
   dialogues:
-  - character: 0
+  - character: 2
     dialogue:
     - character: 1
       index: 0
       message: Forgive me.
+      choices: []
+    - character: 1
+      index: 0
+      message: "I should\u2019ve stopped."
       choices: []
     - character: 1
       index: 0
@@ -54,10 +58,6 @@ MonoBehaviour:
     - character: 1
       index: 0
       message: "No, I won\u2019t. But I\u2019ll try. Please, tell me what you felt."
-      choices: []
-    - character: 1
-      index: 0
-      message: 
       choices: []
     - character: 1
       index: 0

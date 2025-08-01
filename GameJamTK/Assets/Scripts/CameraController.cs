@@ -8,9 +8,14 @@ public class CameraController : MonoBehaviour
     public float speed = 0.1f;
     public float leftBarrier = -10f;
     public float downBarrier = -5f;
+
+    public bool isFree = true;
     
     void LateUpdate()
     {
+        if (!isFree)
+            return;
+        
         Vector3 pos = new Vector3(player.position.x, player.position.y + 3.15f, transform.position.z);
         pos.x = Mathf.Max(pos.x, leftBarrier);
         pos.y = Mathf.Max(pos.y, downBarrier);

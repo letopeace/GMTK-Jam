@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb2d;
     public float speed = 5f;
     public bool blockLeft = false;
+    public bool isFree = true;
     
 	public Animator animator;
     
@@ -27,6 +28,13 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!isFree)
+        {
+            rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+            animator.SetBool("walk", false);
+            return;
+        }
+        
         float h = Input.GetAxis("Horizontal") * speed;
         if (blockLeft)
             h = MathF.Max(h, 0);

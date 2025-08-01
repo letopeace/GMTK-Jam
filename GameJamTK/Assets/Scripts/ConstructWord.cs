@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ConstructWord : MonoBehaviour
 {
+    public bool isDone = false;
     public string word;
     public float xPadding, yPadding;
     public bool inLine = false;
@@ -23,6 +24,9 @@ public class ConstructWord : MonoBehaviour
 
     private void Update()
     {
+        if (isDone)
+            return;
+        
         Check();
         sorted = SortByPosition();
         
@@ -37,6 +41,8 @@ public class ConstructWord : MonoBehaviour
             if (wordInLine == word)
             {
                 Debug.Log("DONE!!!");
+                isDone = true;
+                StartCoroutine(ConnectLetters());
             }
         }
     }
@@ -78,5 +84,42 @@ public class ConstructWord : MonoBehaviour
 
         // Возвращаем как массив
         return clone.ToArray();
+    }
+
+    IEnumerator ConnectLetters()
+    {
+        float spacing = 70;
+        float speed = 4f; // добавь свою скорость, если не задана
+
+        Vector3 center = transform.parent.position;
+        int count = letters.Count;
+        Vector3[] positions = new Vector3[count];
+
+        // Вычисление позиций по центру, с равным интервалом
+        float startX = center.x - spacing * 0.5f * (count - 1);
+        for (int i = 0; i < count; i++)
+        {
+            positions[i] = new Vector3(startX + i * spacing, center.y, letters[i].position.z);
+        }
+
+        // Двигаем каждую букву по отдельности
+        for (int ind = 0; ind < count; ind++)
+        {
+            Vector3 startPos = letters[ind].position;
+            Vector3 targetPos = positions[ind];
+            float t = 0;
+
+            while (t < 1f)
+            {
+                t += Time.deltaTime * speed;
+                letters[ind].position = Vector3.Lerp(startPos, targetPos, t);
+                yield return null;
+            }
+
+            letters[ind].position = targetPos; // фиксируем конечную позицию
+        }
+
+        yield return new WaitForSeconds(0.8f);
+        transform.parent.GetComponent<BoardGame>().NextLevel();
     }
 }

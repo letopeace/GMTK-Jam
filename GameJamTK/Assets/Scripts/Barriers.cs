@@ -35,6 +35,11 @@ public class Barriers : MonoBehaviour
         DialogueSystem.instance.player.blockLeft = false;
         if (rabbitArea != null)
             rabbitArea.justOne = true;
+
+        if (GameManager.instance.progress[SceneType.Room] == 9)
+        {
+            frontBarrier.GetComponent<Collider2D>().enabled = false;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
