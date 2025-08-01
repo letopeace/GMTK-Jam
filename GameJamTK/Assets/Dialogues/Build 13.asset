@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33283ef87c67360439da346dd2cab074, type: 3}
+  m_Name: Build 13
+  m_EditorClassIdentifier: 
+  dialogues:
+  - character: 2
+    dialogue:
+    - character: 1
+      index: 0
+      message: First, apologize.
+      choices:
+      - isRed: 0
+        index: 0
+        message: Sorry
+        scenes: 
+    - character: 1
+      index: 0
+      message: And then, what to say?
+      choices:
+      - isRed: 0
+        index: 0
+        message: "It\u2019s my fault... But you too. You could\u2019ve at least tried
+          to stand up for yourself."
+        scenes: 00000000
+      - isRed: 0
+        index: 0
+        message: "Please, don\u2019t jump. I won\u2019t escape Hell if you do."
+        scenes: 00000000
+      - isRed: 0
+        index: 0
+        message: "I honestly didn\u2019t know it hurt you. You\u2019ll forgive me,
+          right?"
+        scenes: 00000000
+    - character: 1
+      index: 0
+      message: This will go on forever unless I learn a bit more about him.
+      choices: []
+  - character: 0
+    dialogue:
+    - character: 0
+      index: 0
+      message: Wanted something?
+      choices: []
+    - character: 1
+      index: 0
+      message: Yeah. Can you tell me more about that guy?
+      choices: []
+    - character: 0
+      index: 0
+      message: The Rabbit?
+      choices: []
+    - character: 0
+      index: 0
+      message: No! I mean the actual person!
+      choices: []
+    - character: 0
+      index: 0
+      message: Ho, a person? Go forward.
+      choices: []

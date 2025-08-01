@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33283ef87c67360439da346dd2cab074, type: 3}
+  m_Name: Build 18
+  m_EditorClassIdentifier: 
+  dialogues:
+  - character: 2
+    dialogue:
+    - character: 1
+      index: 0
+      message: Forgive me.
+      choices:
+      - isRed: 0
+        index: 0
+        message: "I should\u2019ve stopped."
+        scenes: 01000000
+      - isRed: 0
+        index: 0
+        message: "I should\u2019ve helped you."
+        scenes: 
+    - character: 1
+      index: 0
+      message: "I should\u2019ve seen how much it hurt you. But instead I..."
+      choices:
+      - isRed: 0
+        index: 0
+        message: wanted to seem strong.
+        scenes: 01000000
+      - isRed: 0
+        index: 0
+        message: just had fun beating you...
+        scenes: 
+    - character: 2
+      index: 0
+      message: I was scared...
+      choices:
+      - isRed: 0
+        index: 0
+        message: Stay silent
+        scenes: 01000000
+      - isRed: 0
+        index: 0
+        message: But society made me like this.
+        scenes: 
+    - character: 2
+      index: 0
+      message: I dreamed it would all stop.
+      choices:
+      - isRed: 0
+        index: 0
+        message: Stay silent
+        scenes: 01000000
+      - isRed: 0
+        index: 0
+        message: "Everything would\u2019ve stopped if you had a bit of courage."
+        scenes: 
+    - character: 2
+      index: 0
+      message: No one ever tried to help me. Everyone just laughed behind my back.
+      choices:
+      - isRed: 0
+        index: 0
+        message: Stay silent
+        scenes: 01000000
+      - isRed: 0
+        index: 0
+        message: Because it was kind of funny.
+        scenes: 
+  - character: 0
+    dialogue:
+    - character: 0
+      index: 0
+      message: And I find it funny that you're stuck here for all eternity.
+      choices: []
+    - character: 1
+      index: 0
+      message: That is not funny!
+      choices: []
+    - character: 0
+      index: 0
+      message: AHAHAHAHA. Hilarious.
+      choices: []

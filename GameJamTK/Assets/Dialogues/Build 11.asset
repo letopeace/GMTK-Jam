@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33283ef87c67360439da346dd2cab074, type: 3}
+  m_Name: Build 11
+  m_EditorClassIdentifier: 
+  dialogues:
+  - character: 2
+    dialogue:
+    - character: 1
+      index: 0
+      message: How can I stop him?
+      choices:
+      - isRed: 0
+        index: 0
+        message: "Stop! Let\u2019s talk."
+        scenes: 
+      - isRed: 0
+        index: 0
+        message: "Your death won\u2019t change a damn thing. Don\u2019t do it."
+        scenes: 
+      - isRed: 1
+        index: 0
+        message: Sorry
+        scenes: 01000000
+  - character: 0
+    dialogue:
+    - character: 0
+      index: 0
+      message: "We\u2019re stuck here forever. You\u2019ll never save him."
+      choices:
+      - isRed: 0
+        index: 0
+        message: Damn...
+        scenes: 
