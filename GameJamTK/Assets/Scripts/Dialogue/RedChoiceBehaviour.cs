@@ -20,7 +20,8 @@ public class RedChoiceBehaviour : MonoBehaviour
 		if (GameManager.instance.progress[SceneType.Room] == 6)
 		{
 			movementLimits.x *= 0.4f;
-			softness = 0.2f;
+			softness = 0.01f;
+			button.enabled = true;	
 		}
 	}
 
