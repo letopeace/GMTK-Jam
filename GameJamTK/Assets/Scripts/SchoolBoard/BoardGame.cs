@@ -35,7 +35,8 @@ public class BoardGame : MonoBehaviour
         if (currentIndex >= levels.Length)
         {
             gameObject.SetActive(false);
-            DialogueSystem.instance.Spooked();
+            Camera.main.GetComponent<CameraController>().isFree = true;
+            DialogueSystem.instance.player.isFree = true;
         }
         else
         {

@@ -27,6 +27,7 @@ public class DialoguePanel : MonoBehaviour
         {
             button.onClick.RemoveAllListeners();
         }
+        redButton.onClick.RemoveAllListeners();
         
         buttons[0].onClick.AddListener(Plus0);
         buttons[1].onClick.AddListener(Plus1);

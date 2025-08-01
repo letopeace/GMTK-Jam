@@ -39,16 +39,16 @@ MonoBehaviour:
         index: 0
         message: "It\u2019s my fault... But you too. You could\u2019ve at least tried
           to stand up for yourself."
-        scenes: 
+        scenes: 00000000
       - isRed: 0
         index: 1
         message: "Please, don\u2019t jump. I won\u2019t escape Hell if you do."
-        scenes: 
+        scenes: 00000000
       - isRed: 0
         index: 2
         message: "I honestly didn\u2019t know it hurt you. You\u2019ll forgive me,
           right?"
-        scenes: 
+        scenes: 00000000
   - character: 0
     dialogue:
     - character: 0

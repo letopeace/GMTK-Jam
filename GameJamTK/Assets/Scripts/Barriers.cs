@@ -36,7 +36,7 @@ public class Barriers : MonoBehaviour
         if (rabbitArea != null)
             rabbitArea.justOne = true;
 
-        if (GameManager.instance.progress[SceneType.Room] == 9)
+        if (GetComponent<SceneArea>().type == SceneType.School)
         {
             frontBarrier.GetComponent<Collider2D>().enabled = false;
         }

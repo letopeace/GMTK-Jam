@@ -9,6 +9,7 @@ public class DialogueSystem : MonoBehaviour
     public static DialogueSystem instance;
     
     public PlayerController player;
+    public CharacterControl bunny;
     public Transform[] Characters;
     public DialoguePanel[] DialoguePanels;
     
@@ -105,6 +106,11 @@ public class DialogueSystem : MonoBehaviour
             {
                 isSpoken = true;
                 Spooked();
+            }
+
+            if (currentCharacter == CharacterType.Rabbit)
+            {
+                bunny.Jump();
             }
             
             ind = -1;
