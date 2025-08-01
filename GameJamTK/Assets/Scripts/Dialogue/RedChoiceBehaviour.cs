@@ -16,6 +16,12 @@ public class RedChoiceBehaviour : MonoBehaviour
 	{
 		startPosition = transform.position;
 		button.enabled = false;
+
+		if (GameManager.instance.progress[SceneType.Room] == 6)
+		{
+			movementLimits.x *= 0.4f;
+			softness = 0.2f;
+		}
 	}
 
 	void Update()

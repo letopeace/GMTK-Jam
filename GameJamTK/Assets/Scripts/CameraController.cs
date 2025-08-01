@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
     public float leftBarrier = -10f;
     public float downBarrier = -5f;
     
-    void Update()
+    void LateUpdate()
     {
         Vector3 pos = new Vector3(player.position.x, player.position.y + 3.15f, transform.position.z);
         pos.x = Mathf.Max(pos.x, leftBarrier);

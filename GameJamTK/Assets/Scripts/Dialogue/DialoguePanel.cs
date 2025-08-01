@@ -73,6 +73,7 @@ public class DialoguePanel : MonoBehaviour
         buttons[0].gameObject.SetActive(false);
         buttons[1].gameObject.SetActive(false);
         buttons[2].gameObject.SetActive(false);
+        redButton.gameObject.SetActive(false);
         DialogueSystem.instance.onButton = false;
         
         DialogueSystem.instance.Use();
@@ -87,6 +88,7 @@ public class DialoguePanel : MonoBehaviour
         buttons[0].gameObject.SetActive(false);
         buttons[1].gameObject.SetActive(false);
         buttons[2].gameObject.SetActive(false);
+        redButton.gameObject.SetActive(false);
         DialogueSystem.instance.onButton = false;
         
         DialogueSystem.instance.Use();
@@ -101,6 +103,7 @@ public class DialoguePanel : MonoBehaviour
         buttons[0].gameObject.SetActive(false);
         buttons[1].gameObject.SetActive(false);
         buttons[2].gameObject.SetActive(false);
+        redButton.gameObject.SetActive(false);
         DialogueSystem.instance.onButton = false;
         
         DialogueSystem.instance.Use();

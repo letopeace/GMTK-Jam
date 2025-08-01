@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb2d;
     public float speed = 5f;
+    public bool blockLeft = false;
     
 	public Animator animator;
     
@@ -27,6 +28,8 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal") * speed;
+        if (blockLeft)
+            h = MathF.Max(h, 0);
         
         if (!DialogueSystem.instance.onWindow)
         {
@@ -47,11 +50,15 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                rb2d.velocity = Vector2.zero;
+                rb2d.velocity = new Vector2(0, rb2d.velocity.y);
                 animator.SetBool("walk", false);
             }
         }
-
+        else
+        {
+            rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+            animator.SetBool("walk", false);
+        }
         
     }
     

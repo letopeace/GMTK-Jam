@@ -101,9 +101,13 @@ public class DialogueSystem : MonoBehaviour
 
         if (dialogue.GetDialogue(currentCharacter) == null || dialogue.GetDialogue(currentCharacter).dialogue.Length <= ind)
         {
+            if (currentCharacter == CharacterType.Lucifer)
+            {
+                isSpoken = true;
+                Spook?.Invoke();
+            }
+            
             ind = -1;
-            isSpoken = true;
-            Spook?.Invoke();
             return;
         }
 

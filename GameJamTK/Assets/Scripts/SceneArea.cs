@@ -19,6 +19,7 @@ public class SceneArea : MonoBehaviour
         {
             lucifer.position = luciferPos.position;
             rabbit.position = rabbitPos.position;
+            
         }
         else if (type == SceneType.School)
         {

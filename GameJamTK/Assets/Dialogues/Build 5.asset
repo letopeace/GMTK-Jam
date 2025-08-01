@@ -51,3 +51,21 @@ MonoBehaviour:
         index: 0
         message: "Fine, let\u2019s try again."
         scenes: 
+  - character: 2
+    dialogue:
+    - character: 1
+      index: 0
+      message: Now I'll definitely save
+      choices:
+      - isRed: 0
+        index: 0
+        message: "Hey! Rabbit, don\u2019t do it!"
+        scenes: 01000000
+      - isRed: 0
+        index: 1
+        message: Rabbit? What are you doing? Come here.
+        scenes: 01000000
+      - isRed: 0
+        index: 2
+        message: STOP!!!
+        scenes: 01000000
