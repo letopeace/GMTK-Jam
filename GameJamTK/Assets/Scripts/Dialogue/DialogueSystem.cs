@@ -12,6 +12,7 @@ public class DialogueSystem : MonoBehaviour
     public CharacterControl bunny;
     public Transform[] Characters;
     public DialoguePanel[] DialoguePanels;
+    public End end;
     
     public Dictionary<CharacterType, Transform> characters;
     public Dictionary<CharacterType, DialoguePanel> dialoguePanels;
@@ -110,7 +111,14 @@ public class DialogueSystem : MonoBehaviour
 
             if (currentCharacter == CharacterType.Rabbit)
             {
-                bunny.Jump();
+                if (GameManager.instance.progress[SceneType.Building] == 22)
+                {
+                    end.EndGame();
+                }
+                else
+                {
+                    bunny.Jump();
+                }
             }
             
             ind = -1;

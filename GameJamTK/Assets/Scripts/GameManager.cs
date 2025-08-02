@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
+    public GameObject array;
     
     public SceneType scene = SceneType.Room;
     public Dictionary<SceneType, int> progress;
@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else if (instance != this)
         {

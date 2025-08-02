@@ -37,6 +37,7 @@ public class BoardGame : MonoBehaviour
             gameObject.SetActive(false);
             Camera.main.GetComponent<CameraController>().isFree = true;
             DialogueSystem.instance.player.isFree = true;
+            GameManager.instance.array.SetActive(true);
         }
         else
         {
