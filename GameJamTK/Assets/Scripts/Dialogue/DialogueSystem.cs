@@ -39,7 +39,6 @@ public class DialogueSystem : MonoBehaviour
             return; 
         }
         instance = this;
-        DontDestroyOnLoad(gameObject);
         
         characters = new Dictionary<CharacterType, Transform>()
         {
