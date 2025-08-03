@@ -94,7 +94,7 @@ MonoBehaviour:
       - isRed: 0
         index: 0
         message: Stay silent
-        scenes: 0100000000000000
+        scenes: 010000000000000002000000
       - isRed: 0
         index: 0
         message: "I\u2019m the one really stuck in a loop."

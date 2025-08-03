@@ -28,7 +28,7 @@ public class SceneArea : MonoBehaviour
 
         if (type == SceneType.Building)
         {
-            lucifer.position = luciferPos.position;
+            lucifer.position = luciferPos.position; 
             rabbit.position = rabbitPos.position;
             
             luci.Switch(false);
@@ -36,11 +36,13 @@ public class SceneArea : MonoBehaviour
         }
         else if (type == SceneType.School)
         {
+            /*
             if (GameManager.instance.progress[SceneType.School] != 0)
             {
                 rabbit.position = rabbitPos.position;
                 rabbi.Switch(false);
             }
+            */
         }
         else
         {

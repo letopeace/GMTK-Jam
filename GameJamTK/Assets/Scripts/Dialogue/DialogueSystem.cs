@@ -31,6 +31,8 @@ public class DialogueSystem : MonoBehaviour
     public bool isSpoken = false;
     public static event Action Spook;
 
+    private SoundLogic sound;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -53,6 +55,11 @@ public class DialogueSystem : MonoBehaviour
             { CharacterType.Wolf , DialoguePanels[1]},
             { CharacterType.Rabbit , DialoguePanels[2]}
         };
+    }
+
+    private void Start()
+    {
+        sound = GetComponent<SoundLogic>();
     }
 
     void Update()
@@ -97,6 +104,8 @@ public class DialogueSystem : MonoBehaviour
 
     private void DialogueLine(Dialogue dialogue)
     {
+        sound.Play();
+        
         dialoguePanels[previousCharacter].gameObject.SetActive(false);
         onWindow = false;
 

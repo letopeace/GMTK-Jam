@@ -7,7 +7,9 @@ public class BoardGame : MonoBehaviour
 {
     public float right, left, top, bottom;
     public GameObject[] levels;
+    public GameObject loopText;
     public int currentIndex = 0;
+    public SoundLogic sound;
 
     private void OnEnable()
     {
@@ -27,6 +29,11 @@ public class BoardGame : MonoBehaviour
         levels[currentIndex].SetActive(true);
     }
 
+    public void Sound()
+    {
+        sound.Play(currentIndex);
+    }
+
     public void NextLevel()
     {
         levels[currentIndex].SetActive(false);
@@ -38,6 +45,7 @@ public class BoardGame : MonoBehaviour
             Camera.main.GetComponent<CameraController>().isFree = true;
             DialogueSystem.instance.player.isFree = true;
             GameManager.instance.array.SetActive(true);
+            loopText.SetActive(true);
         }
         else
         {

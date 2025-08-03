@@ -119,7 +119,10 @@ public class ConstructWord : MonoBehaviour
             letters[ind].position = targetPos; // фиксируем конечную позицию
         }
 
+        BoardGame board = transform.parent.GetComponent<BoardGame>();
+        board.Sound();
+
         yield return new WaitForSeconds(0.8f);
-        transform.parent.GetComponent<BoardGame>().NextLevel();
+        board.NextLevel();
     }
 }
