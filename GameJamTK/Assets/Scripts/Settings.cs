@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class Settings : MonoBehaviour
 {
     public static Settings instance;
+    public static event Action musicVolumeChanged;
+    public static event Action soundVolumeChanged;
     
     public Slider musicSlider;
     public Slider soundSlider;
@@ -42,12 +44,14 @@ public class Settings : MonoBehaviour
     {
         PlayerPrefs.SetFloat(musicName, value);
         musicVolume = value;
+        musicVolumeChanged?.Invoke();
     }
 
     public void SetSound(float value)
     {
         PlayerPrefs.SetFloat(soundName, value);
         soundVolume = value;
+        soundVolumeChanged?.Invoke();
     }
     
 }

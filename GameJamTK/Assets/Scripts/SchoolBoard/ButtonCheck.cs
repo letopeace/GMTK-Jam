@@ -34,12 +34,16 @@ public class ButtonCheck : MonoBehaviour, IPointerDownHandler
             transform.position = pos;
             
             if (Input.GetMouseButtonUp(0))
+            {
+                GameManager.instance.bor.Stop();
                 checking = false;
+            }
         }
     }
     
     public void OnPointerDown(PointerEventData eventData)
     {
+        GameManager.instance.bor.Play();
         tempPos = Input.mousePosition;
         startPos = transform.position;
         checking = true;

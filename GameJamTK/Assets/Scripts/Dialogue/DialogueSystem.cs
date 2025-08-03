@@ -122,6 +122,7 @@ public class DialogueSystem : MonoBehaviour
                 if (GameManager.instance.progress[SceneType.Building] == 22)
                 {
                     end.EndGame();
+                    isSpoken = true;
                 }
                 else
                 {

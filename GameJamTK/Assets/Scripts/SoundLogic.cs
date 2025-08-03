@@ -16,6 +16,12 @@ public class SoundLogic : MonoBehaviour
     {
         startVolume = audioSource.volume;
         audioSource.volume = startVolume * Settings.instance.soundVolume;
+        Settings.soundVolumeChanged += Volume;
+    }
+
+    public void Volume()
+    {
+        audioSource.volume = startVolume * Settings.instance.soundVolume;
     }
 
     public void Play()
@@ -37,6 +43,11 @@ public class SoundLogic : MonoBehaviour
             audioSource.clip = clips[Random.Range(0, clips.Length)];
             audioSource.Play();
         }
+    }
+
+    public void Stop()
+    {
+        audioSource.Stop();
     }
 
     public void Play(int index)

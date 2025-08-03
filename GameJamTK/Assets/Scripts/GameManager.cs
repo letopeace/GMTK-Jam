@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameObject array;
+    public SoundLogic bor;
     
     public SceneType scene = SceneType.Room;
     public Dictionary<SceneType, int> progress;
